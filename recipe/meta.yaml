@@ -1,5 +1,5 @@
 {% set name = "quera-ahs-utils" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quera-ahs-utils-{{ version }}.tar.gz
-  sha256: 0a2aa53a11bd2766f6ac3d6ed7ac9f930256da260db90823150f266219eccf8e
+  sha256: 9ee2bdb5665f654995f799e67e191458e6309b05f48b0744c839808bf93f2359
 
 build:
   noarch: python
