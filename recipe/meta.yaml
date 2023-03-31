@@ -21,9 +21,11 @@ requirements:
   run:
     - python >=3.7
     - amazon-braket-sdk
+    - amazon-braket-schemas
     - networkx
     - numpy
     - scipy
+    - pydantic
     - matplotlib-base
 
 test:
