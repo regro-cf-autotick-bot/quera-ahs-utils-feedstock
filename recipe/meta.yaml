@@ -24,7 +24,6 @@ requirements:
     - amazon-braket-schemas
     - networkx
     - numpy
-    - scipy
     - pydantic
     - matplotlib-base
 
