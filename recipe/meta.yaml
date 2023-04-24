@@ -1,5 +1,5 @@
 {% set name = "quera-ahs-utils" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quera-ahs-utils-{{ version }}.tar.gz
-  sha256: ad4a40823db9ae7b798b93c000f77d3ffffa15ed1e2fa63ffdfff9639a6ca374
+  sha256: e6a5e64ec7259cb39fa5b8de391745b4835025af9ea68b3050453321d2f423a1
 
 build:
   noarch: python
@@ -16,10 +16,10 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.10
     - pip
   run:
-    - python >=3.7
+    - python >=3.10
     - amazon-braket-sdk
     - amazon-braket-schemas
     - networkx
