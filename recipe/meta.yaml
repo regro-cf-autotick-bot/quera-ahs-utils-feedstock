@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "quera-ahs-utils" %}
 {% set version = "0.4.3" %}
 
@@ -6,20 +7,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quera-ahs-utils-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/quera-ahs-utils-{{ version }}.tar.gz
   sha256: ac4f3b956e2a6a885f71b29021b32dd386705db0c49209ace14e8b89b87c8ad8
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - amazon-braket-sdk
     - amazon-braket-schemas
     - networkx
@@ -34,6 +35,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/QuEraComputing/quera-ahs-utils
